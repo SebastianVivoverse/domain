@@ -32,7 +32,7 @@ class WormImage:
         return url_to_id(self.url)
 
     @property
-    def well_db_id(self):
+    def worm_db_id(self):
         return url_to_id(self.worm)
 
     def to_dict(self):

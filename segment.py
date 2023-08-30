@@ -1,6 +1,7 @@
-from vertex import Vertex
-from segment_bounding_box import SegmentBoundingBox
-from utils import url_to_id
+from domain.vertex import Vertex
+from domain.segment_bounding_box import SegmentBoundingBox
+from domain.utils import url_to_id
+from shapely import Polygon
 
 
 class Segment:

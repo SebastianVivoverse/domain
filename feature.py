@@ -1,7 +1,7 @@
 import datetime
-from segment import Segment
-from phenotype import Phenotype
-from utils import url_to_id
+from domain.segment import Segment
+from domain.phenotype import Phenotype
+from domain.utils import url_to_id
 
 
 class Feature:

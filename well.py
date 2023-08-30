@@ -1,5 +1,5 @@
-from worm import Worm
-from utils import url_to_id
+from domain.worm import Worm
+from domain.utils import url_to_id
 
 class Well:
     def __init__(self,

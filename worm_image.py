@@ -1,7 +1,7 @@
-from feature import Feature
-from note import Note
-from bounding_box import BoundingBox
-from utils import url_to_id
+from domain.feature import Feature
+from domain.note import Note
+from domain.bounding_box import BoundingBox
+from domain.utils import url_to_id
 
 
 class WormImage:

@@ -1,5 +1,5 @@
 import datetime
-from utils import url_to_id
+from domain.utils import url_to_id
 
 
 class Phenotype:

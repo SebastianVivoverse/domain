@@ -55,7 +55,7 @@ class Experiment:
             "chip_size": self.chip_size,
             "chip_serial_no": self.chip_serial_no,
             "acquisition_type": self.acquisition_type,
-            "scan_date": self.scan_date,
+            "scan_date": str(self.scan_date),
             "created_on": str(self.created_on),
             "current_round": self.current_round
         }

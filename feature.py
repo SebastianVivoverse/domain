@@ -50,10 +50,10 @@ class Feature:
             "worm": self.worm,
             "worm_image": self.worm_image,
             "name": self.name,
-            "x": self.x,
-            "y": self.y,
-            "z": self.z,
-            "t": self.t,
+            "x": int(self.x),
+            "y": int(self.y),
+            "z": int(self.z),
+            "t": int(self.t),
             "user": self.user,
-            "timestamp": self.timestamp
+            "timestamp": str(self.timestamp)
         }

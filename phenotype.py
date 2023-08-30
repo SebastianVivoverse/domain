@@ -34,5 +34,5 @@ class Phenotype:
             "name": self.name,
             "score": self.score,
             "user": self.user,
-            "timestamp": self.timestamp
+            "timestamp": str(self.timestamp)
         }

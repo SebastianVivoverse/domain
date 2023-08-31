@@ -63,6 +63,8 @@ class Segment:
     @vertices.setter
     def vertices(self, vertices: list[Vertex]):
         self._vertices = self._sort_vertices_by_order(vertices)
+        self._polygon = self._build_polygon(self.vertices)
+        self._bounding_box = self._generate_bounding_box(self._polygon)
 
     @property
     def polygon(self) -> Polygon:

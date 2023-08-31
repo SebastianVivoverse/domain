@@ -37,11 +37,11 @@ class Segment:
             "filepath": self._filepath
         }
 
-    def load_children(self, repository):
-        self._vertices = repository.get_vertices_for_segment(self.db_id)
-        self._bounding_box = repository.get_bounding_box_for_segment(self.db_id)
-        self._filepath = self._bounding_box.filepath if self._bounding_box is not None else None
-        self._polygon = self._build_polygon(self._vertices)
+    # def load_children(self, repository):
+    #     self._vertices = repository.get_vertices_for_segment(self.db_id)
+    #     self._bounding_box = repository.get_bounding_box_for_segment(self.db_id)
+    #     self._filepath = self._bounding_box.filepath if self._bounding_box is not None else None
+    #     self._polygon = self._build_polygon(self._vertices)
 
     @property
     def user(self) -> str:
@@ -104,7 +104,7 @@ class Segment:
 
     def _generate_bounding_box(self, polygon: Polygon) -> SegmentBoundingBox:
         bounding_box = None
-        bounding_box_db_id = self._bounding_box.db_id if self._bounding_box is not None else None
+        bounding_box_url = self._bounding_box.url if self._bounding_box is not None else None
 
         if polygon is not None:
             bounds = polygon.bounds
@@ -113,8 +113,8 @@ class Segment:
                                               int(bounds[2]),
                                               int(bounds[3]),
                                               self._filepath,
-                                              db_id=bounding_box_db_id,
-                                              segment_db_id=self.db_id)
+                                              url=bounding_box_url,
+                                              segment=self.url)
 
         return bounding_box
 

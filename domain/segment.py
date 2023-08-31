@@ -178,3 +178,9 @@ class Segment:
 
         return counterclockwise_vertices
 
+    def __repr__(self):
+        dictionary = self.to_dict()
+        dictionary["vertices"] = str(self.vertices)
+        dictionary["bounding_box"] = str(self.bounding_box)
+        dictionary["polygon"] = str(self.polygon)
+        return f'{dictionary}'

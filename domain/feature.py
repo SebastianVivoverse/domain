@@ -57,3 +57,9 @@ class Feature:
             "user": self.user,
             "timestamp": str(self.timestamp)
         }
+
+    def __repr__(self):
+        dictionary = self.to_dict()
+        dictionary["segmentations"] = str(self.segmentations)
+        dictionary["phenotypes"] = str(self.phenotypes)
+        return f'{dictionary}'

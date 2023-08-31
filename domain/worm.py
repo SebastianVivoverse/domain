@@ -28,3 +28,8 @@ class Worm:
             "well": self.well,
             "channel_number": self.channel_number
         }
+
+    def __repr__(self):
+        dictionary = self.to_dict()
+        dictionary["worm_images"] = str(self.worm_images)
+        return f'{dictionary}'

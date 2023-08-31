@@ -31,3 +31,7 @@ class Mask:
             "polygon": self._polygon
         }
 
+    def __repr__(self):
+        return f'{self.to_dict()}'
+
+

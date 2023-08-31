@@ -32,3 +32,6 @@ class Note:
             "analysis_type": self.analysis_type,
             "user": self.user
         }
+
+    def __repr__(self):
+        return f'{self.to_dict()}'

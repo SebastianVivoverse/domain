@@ -49,3 +49,8 @@ class Well:
             "solvent_name": self.solvent_name,
             "solvent_concentration": self.solvent_concentration
         }
+
+    def __repr__(self):
+        dictionary = self.to_dict()
+        dictionary["worms"] = str(self.worms)
+        return f'{dictionary}'

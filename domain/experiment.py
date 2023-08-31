@@ -59,3 +59,8 @@ class Experiment:
             "created_on": str(self.created_on),
             "current_round": self.current_round
         }
+
+    def __repr__(self):
+        dictionary = self.to_dict()
+        dictionary["wells"] = str(self.wells)
+        return f'{dictionary}'

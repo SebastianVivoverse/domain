@@ -38,3 +38,6 @@ class Vertex:
             "t": int(self.t),
             "order": self.order
         }
+
+    def __repr__(self):
+        return f'{self.to_dict()}'

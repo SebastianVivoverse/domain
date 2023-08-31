@@ -54,3 +54,6 @@ class BoundingBox:
             "filepath": self.filepath,
             "worm_image": self.worm_image
         }
+
+    def __repr__(self):
+        return f'{self.to_dict()}'

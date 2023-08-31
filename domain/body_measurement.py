@@ -38,3 +38,6 @@ class BodyMeasurement:
             "mask": self.mask,
             "worm": self.worm
         }
+
+    def __repr__(self):
+        return f'{self.to_dict()}'

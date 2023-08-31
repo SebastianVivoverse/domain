@@ -45,3 +45,10 @@ class WormImage:
             "time_lapse": self.time_lapse,
             "filepath": self.filepath
         }
+
+    def __repr__(self):
+        dictionary = self.to_dict()
+        dictionary["features"] = str(self.features)
+        dictionary["notes"] = str(self.notes)
+        dictionary["bounding_boxes"] = str(self.bounding_boxes)
+        return f'{dictionary}'

@@ -72,6 +72,10 @@ class Segment:
     def bounding_box(self) -> SegmentBoundingBox:
         return self._generate_bounding_box(self.polygon)
 
+    def set_bounding_box_url(self, url: str):
+        if self._bounding_box is not None:
+            self._bounding_box.url = url
+
     @property
     def filepath(self) -> str:
         return self._filepath

@@ -32,9 +32,9 @@ class Vertex:
         return {
             "url": self.url,
             "segment": self.segment,
-            "x": self.x,
-            "y": self.y,
-            "z": self.z,
-            "t": self.t,
+            "x": int(self.x),
+            "y": int(self.y),
+            "z": int(self.z),
+            "t": int(self.t),
             "order": self.order
         }

@@ -52,5 +52,6 @@ class Well:
 
     def __repr__(self):
         dictionary = self.to_dict()
+        dictionary["class"] = "Well"
         dictionary["worms"] = str(self.worms)
         return f'{dictionary}'

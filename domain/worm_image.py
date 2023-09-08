@@ -48,6 +48,7 @@ class WormImage:
 
     def __repr__(self):
         dictionary = self.to_dict()
+        dictionary["class"] = "WormImage"
         dictionary["features"] = str(self.features)
         dictionary["notes"] = str(self.notes)
         dictionary["bounding_boxes"] = str(self.bounding_boxes)

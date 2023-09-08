@@ -32,6 +32,8 @@ class Mask:
         }
 
     def __repr__(self):
-        return f'{self.to_dict()}'
+        dictionary = self.to_dict()
+        dictionary["class"] = "Mask"
+        return f'{dictionary}'
 
 

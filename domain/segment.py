@@ -180,6 +180,7 @@ class Segment:
 
     def __repr__(self):
         dictionary = self.to_dict()
+        dictionary["class"] = "Segment"
         dictionary["vertices"] = str(self.vertices)
         dictionary["bounding_box"] = str(self.bounding_box)
         dictionary["polygon"] = str(self.polygon)

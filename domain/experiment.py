@@ -62,5 +62,6 @@ class Experiment:
 
     def __repr__(self):
         dictionary = self.to_dict()
+        dictionary["class"] = "Experiment"
         dictionary["wells"] = str(self.wells)
         return f'{dictionary}'

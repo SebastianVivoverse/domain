@@ -60,6 +60,7 @@ class Feature:
 
     def __repr__(self):
         dictionary = self.to_dict()
+        dictionary["class"] = "Feature"
         dictionary["segmentations"] = str(self.segmentations)
         dictionary["phenotypes"] = str(self.phenotypes)
         return f'{dictionary}'

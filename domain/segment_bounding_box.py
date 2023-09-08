@@ -56,4 +56,6 @@ class SegmentBoundingBox:
         return (self.bottom_right_x, self.bottom_right_y)
 
     def __repr__(self):
-        return f'{self.to_dict()}'
+        dictionary = self.to_dict()
+        dictionary["class"] = "SegmentBoundingBox"
+        return f'{dictionary}'

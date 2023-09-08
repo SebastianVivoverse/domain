@@ -31,5 +31,6 @@ class Worm:
 
     def __repr__(self):
         dictionary = self.to_dict()
+        dictionary["class"] = "Worm"
         dictionary["worm_images"] = str(self.worm_images)
         return f'{dictionary}'

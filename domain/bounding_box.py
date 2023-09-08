@@ -56,4 +56,6 @@ class BoundingBox:
         }
 
     def __repr__(self):
-        return f'{self.to_dict()}'
+        dictionary = self.to_dict()
+        dictionary["class"] = "BoundingBox"
+        return f'{dictionary}'
